@@ -1,0 +1,73 @@
+.App {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+div[contentEditable="true"]:empty:after {
+    content: attr(data-prompt);
+    opacity: 0.4;
+}
+
+.clsSearchBarParent {
+    margin-left: 54px;
+}
+
+.clsSearchBar:before {
+    content: "@";
+    position: absolute;
+    font-size: xx-large;
+    font-weight: 600;
+    margin-left: -54px;
+}
+
+.h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+}
+
+.h2 {
+    font-family: "Righteous", cursive;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+}
+
+.h3 {
+    font-family: "Righteous", cursive;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+}
+
+.s1 {
+    font-family: "Exo 2", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: 0em;
+}
+
+.n1 {
+    font-family: "Exo", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.04;
+    letter-spacing: 0em;
+}
