@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/splintertracker/static/css/main.3a6e2633.css",
-    "main.js": "/splintertracker/static/js/main.ee78a691.js",
-    "index.html": "/splintertracker/index.html",
-    "main.3a6e2633.css.map": "/splintertracker/static/css/main.3a6e2633.css.map",
-    "main.ee78a691.js.map": "/splintertracker/static/js/main.ee78a691.js.map"
+    "main.css": "/splintertracker1/static/css/main.3a6e2633.css",
+    "main.js": "/splintertracker1/static/js/main.ee78a691.js",
+    "index.html": "/splintertracker1/index.html",
+    "main.3a6e2633.css.map": "/splintertracker1/static/css/main.3a6e2633.css.map",
+    "main.ee78a691.js.map": "/splintertracker1/static/js/main.ee78a691.js.map"
   },
   "entrypoints": [
     "static/css/main.3a6e2633.css",
