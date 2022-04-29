@@ -103,7 +103,7 @@ function App() {
     return (
         <div className="App" suppressContentEditableWarning={true}>
             <HeaderBar className="absolute" />
-            <div className="flex flex-col h-full items-center justify-center gap-4 ">
+            <div className="flex flex-1 flex-col h-full items-center justify-center gap-4 ">
                 <h2 className="h2 text-2xl mt-20">Tell me who you are</h2>
                 <div className="clsSearchBarParent flex">
                     <div
@@ -113,9 +113,9 @@ function App() {
                         id="inputName"
                         suppressContentEditableWarning={true}
                     />
-                    <div className="h3 flex w-20 text-2xl font-semibold decoration-none items-center justify-center" contentEditable="false" onClick={onButtonClick}>
+                    <button className="h3 flex w-20 text-2xl font-semibold decoration-none items-center justify-center" contentEditable="false" onClick={onButtonClick}>
                         Go
-                    </div>
+                    </button>
                 </div>
                 {details.name && (
                     <div className="flex flex-col mt-20 gap-4">

@@ -32,7 +32,7 @@ a {
 }
 .clsAuthor{
     background-color: var(--author-color);
-
+    margin-top: auto;
 }
 .clsSearchBar{
     background-color: var(--searchbar-color);

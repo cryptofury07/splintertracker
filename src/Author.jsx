@@ -1,6 +1,6 @@
 const Author = () => {
     return (
-        <div className="clsAuthor mt-24 p-10 text-white flex flex-col space-x-4 gap-4 w-full shadow-2xl shadow-grey justify-center items-center">
+        <div className="clsAuthor mt-20 p-10 text-white flex flex-col space-x-4 gap-4 w-full shadow-2xl shadow-grey justify-center items-center">
             <h1 className="h2">Author - CRYPTOFURY</h1>
             <p className="s1">
                 I am a Web developer and Android native developer, built this website to track info/analyse player profile in spilinterlands. I am a striving Splinterlands player eager to grow as well
