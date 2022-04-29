@@ -136,9 +136,9 @@ function App() {
                         <div className="h2 mt-20">Based on last {battles && battles.battles && battles.battles.length} battles</div>
                         <div className="h2">Winning Combo</div>
                         <MonsterCards arrMonsterCards={monsterWinCards} />
-                        <Author/>
                     </div>
                 )}
+                 <Author/>
             </div>
         </div>
     );
