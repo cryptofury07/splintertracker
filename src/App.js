@@ -26,11 +26,14 @@ function App() {
 
     function onButtonClick() {
         let inputElement = document.getElementById("inputName");
-        const value = inputElement.innerText;
-        // const value = "cryptofury";
-        NetworkManager.getDetails(value, successDetailsFunc, failureBattlesFunc);
-        NetworkManager.getBalances(value, successBalancesFunc, failureBattlesFunc);
-        NetworkManager.getBattles(value, successBattlesFunc, failureBattlesFunc);
+        var value = inputElement.innerText;
+        if (value != "") {
+            value = value.toLowerCase().trim();
+            // const value = "cryptofury";
+            NetworkManager.getDetails(value, successDetailsFunc, failureBattlesFunc);
+            NetworkManager.getBalances(value, successBalancesFunc, failureBattlesFunc);
+            NetworkManager.getBattles(value, successBattlesFunc, failureBattlesFunc);
+        }
     }
 
     function successBattlesFunc(data) {
@@ -43,11 +46,11 @@ function App() {
 
     function successCardsFunc(data) {
         if (!battles.battles) return;
-        let arrCards = getMonsterCards(battles,data,5);
+        let arrCards = getMonsterCards(battles, data, 5);
         setMonsterWinCards(arrCards);
     }
 
-    function getMonsterCards(battles,data,maxCount){
+    function getMonsterCards(battles, data, maxCount) {
         let hashMap = new Map();
         let totalBattles = battles.battles.length;
         let battlesWon = 0;
@@ -138,7 +141,7 @@ function App() {
                         <MonsterCards arrMonsterCards={monsterWinCards} />
                     </div>
                 )}
-                 <Author/>
+                <Author />
             </div>
         </div>
     );
