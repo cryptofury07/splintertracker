@@ -24,6 +24,21 @@ div[contentEditable="true"]:empty:after {
     font-weight: 600;
     margin-left: -54px;
 }
+.clsBattleCardParent {
+    overflow-y: scroll;
+}
+.clsBattleCard {
+    border-bottom: 1px solid #0e444c;
+}
+[data-winner="true"] {
+    color: green;
+}
+[data-winner="false"] {
+    color: red;
+}
+.clsBattleCard:last-child {
+    border-bottom: 0;
+}
 
 .h1 {
     font-family: "Ubuntu", sans-serif;

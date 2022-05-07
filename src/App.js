@@ -6,6 +6,7 @@ import NetworkManager from "./NetworkManager";
 import AppConstants from "./AppConstants";
 import MonsterCards from "./MonsterCards";
 import Author from "./Author";
+import BattleCards from "./BattleCards";
 
 function App() {
     // const [details, setDetails] = useState({ name: "Cryptofury", league: "2", power: "40,000", rating: "1122", ecr: "56%" });
@@ -19,17 +20,18 @@ function App() {
 
     const [details, setDetails] = useState({});
     const [balances, setBalances] = useState([]);
+    const [totalcards, setTotalCards] = useState([]);
     const [battles, setBattles] = useState({});
     const [monsterWinCards, setMonsterWinCards] = useState([]);
 
     const [winRate, setWinRate] = useState("");
-
+    // onButtonClick();
     function onButtonClick() {
         let inputElement = document.getElementById("inputName");
         var value = inputElement.innerText;
-        if (value != "") {
-            value = value.toLowerCase().trim();
-            // const value = "cryptofury";
+        value = "poprevolt";
+        if (value !== "") {
+            // value = value.toLowerCase().trim();
             NetworkManager.getDetails(value, successDetailsFunc, failureBattlesFunc);
             NetworkManager.getBalances(value, successBalancesFunc, failureBattlesFunc);
             NetworkManager.getBattles(value, successBattlesFunc, failureBattlesFunc);
@@ -46,6 +48,7 @@ function App() {
 
     function successCardsFunc(data) {
         if (!battles.battles) return;
+        setTotalCards(data);
         let arrCards = getMonsterCards(battles, data, 5);
         setMonsterWinCards(arrCards);
     }
@@ -55,12 +58,12 @@ function App() {
         let totalBattles = battles.battles.length;
         let battlesWon = 0;
         battles.battles.forEach((element) => {
-            if (element.winner == battles.player) {
+            if (element.winner === battles.player) {
                 battlesWon = battlesWon + 1;
                 let detail = JSON.parse(element.details);
                 if (detail) {
                     let selectedTeam = detail.team2;
-                    if (detail.team1 && detail.team1.player && detail.team1.player == battles.player) {
+                    if ( detail?.team1?.player === battles.player) {
                         selectedTeam = detail.team1;
                     }
                     if (selectedTeam && selectedTeam.monsters)
@@ -141,6 +144,8 @@ function App() {
                         <MonsterCards arrMonsterCards={monsterWinCards} />
                     </div>
                 )}
+                <div className="h2">Battles</div>
+                {battles.battles && <BattleCards arrBattleCards={battles.battles} arrTotalCards={totalcards}/>}
                 <Author />
             </div>
         </div>
