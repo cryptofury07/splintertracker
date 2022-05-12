@@ -7,6 +7,7 @@ import AppConstants from "./AppConstants";
 import MonsterCards from "./MonsterCards";
 import Author from "./Author";
 import BattleCards from "./BattleCards";
+import AppUtils from "./AppUtils";
 
 function App() {
     // const [details, setDetails] = useState({ name: "Cryptofury", league: "2", power: "40,000", rating: "1122", ecr: "56%" });
@@ -63,7 +64,7 @@ function App() {
                 let detail = JSON.parse(element.details);
                 if (detail) {
                     let selectedTeam = detail.team2;
-                    if ( detail?.team1?.player === battles.player) {
+                    if (detail?.team1?.player === battles.player) {
                         selectedTeam = detail.team1;
                     }
                     if (selectedTeam && selectedTeam.monsters)
@@ -144,8 +145,12 @@ function App() {
                         <MonsterCards arrMonsterCards={monsterWinCards} />
                     </div>
                 )}
-                <div className="h2">Battles</div>
-                {battles.battles && <BattleCards arrBattleCards={battles.battles} arrTotalCards={totalcards}/>}
+                {battles.battles && (
+                    <div className="">
+                        <div className="h2 mb-4">Battles</div>
+                        <BattleCards arrBattleCards={battles.battles} arrTotalCards={totalcards} />
+                    </div>
+                )}
                 <Author />
             </div>
         </div>

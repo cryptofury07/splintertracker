@@ -24,14 +24,24 @@ div[contentEditable="true"]:empty:after {
     font-weight: 600;
     margin-left: -54px;
 }
-.clsBattleCardParent {
+.clsBattleCardParent,
+.clsBattleMonsterParent {
     overflow-y: scroll;
+    min-width: 720px;
 }
-.clsBattleCard {
+.clsBattleMonsterParent{
+    position: absolute;
+    height: 100%;
+}
+.clsBattleCard,
+.clsBattleMonster {
     border-bottom: 1px solid #0e444c;
 }
 [data-winner="true"] {
     color: green;
+}
+.clsDecWins[data-winner="false"] {
+    opacity: 0;
 }
 [data-winner="false"] {
     color: red;
