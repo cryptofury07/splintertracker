@@ -146,8 +146,8 @@ function App() {
                     </div>
                 )}
                 {battles.battles && (
-                    <div className="">
-                        <div className="h2 mb-4">Battles</div>
+                    <div className="mb-[40px]">
+                        <div className="h2 mb-[24px]">Recent Battles</div>
                         <BattleCards arrBattleCards={battles.battles} arrTotalCards={totalcards} />
                     </div>
                 )}

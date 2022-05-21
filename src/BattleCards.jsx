@@ -49,12 +49,16 @@ const BattleCards = (props) => {
         setArrMonsters(monsters);
     }
 
+    function closeBattleMonsters(){
+        setArrMonsters([]);
+    }
+
     return (
         <div>
-            {arrMonsters.length > 0 && <BattleMonsters arrBattleMonsters={arrMonsters}></BattleMonsters>}
+            {arrMonsters.length > 0 && <BattleMonsters arrBattleMonsters={arrMonsters} closeCallBack={closeBattleMonsters}></BattleMonsters>}
             <ul className="clsBattleCardParent clsCard rounded-xl flex flex-col  max-w-[90%]  max-h-[800px]">
                 {props.arrBattleCards.map((element) => (
-                    <li className="clsBattleCard flex flex-col p-14 rounded-xl">
+                    <li className="clsBattleCard flex flex-col p-14">
                         <div className="flex flex-row gap-4 justify-between	">
                             <div className="h3">{element.match_type}</div>
                             <button className="h3" data-winner={element.player_1 === element.winner ? "true" : "false"} onClick={() => analyseMonsters(element, element.player_1)}>
