@@ -108,9 +108,9 @@ function App() {
 
     return (
         <div className="App" suppressContentEditableWarning={true}>
-            <HeaderBar className="absolute" />
-            <div className="flex flex-1 flex-col h-full items-center justify-center gap-4 ">
-                <h2 className="h2 text-2xl mt-20">Tell me who you are</h2>
+            <HeaderBar />
+            <div id="home" className="pt-20 flex flex-1 flex-col h-full items-center justify-center gap-4 ">
+                <h2  className="h2 text-2xl pt-20">Tell me who you are</h2>
                 <div className="clsSearchBarParent flex">
                     <div
                         className="s1 clsSearchBar flex w-60 h-14 font-medium text-2xl items-center justify-start p-4 rounded-xl"
@@ -139,12 +139,12 @@ function App() {
                                 <DetailCard name={balance.token} value={balance.balance} />
                             ))}
                         </div>
-                        <div className="h2 mt-20">Based on last {battles && battles.battles && battles.battles.length} battles</div>
+                        <div id="winningcombo" className="h2 pt-20">Based on last {battles && battles.battles && battles.battles.length} battles</div>
                         <div className="h2">Winning Combo</div>
                         <MonsterCards arrMonsterCards={monsterWinCards} />
                     </div>
                 )}
-                <div className="h2">Battles</div>
+                {battles.battles && <div id="battles" className="h2  pt-20">Battles</div>}
                 {battles.battles && <BattleCards arrBattleCards={battles.battles} arrTotalCards={totalcards}/>}
                 <Author />
             </div>

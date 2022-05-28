@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .App {
     text-align: center;
     min-height: 100vh;
@@ -6,6 +9,16 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+}
+
+.clsHeader{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    z-index: 2;
 }
 
 div[contentEditable="true"]:empty:after {
