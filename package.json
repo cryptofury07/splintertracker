@@ -1,6 +1,6 @@
 {
     "name": "splintertracker",
-    "version": "0.1.0",
+    "version": "1.0",
     "private": true,
     "homepage": "https://cryptofury07.github.io/splintertracker",
     "dependencies": {
