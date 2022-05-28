@@ -5,6 +5,7 @@
     --author-color: rgb(10, 10, 179);
     --searchbar-color: rgb(226, 226, 226);
     --link-color: cornflowerblue;
+    --bestin-color: lightblue;
 }
 
 [data-theme="dark"] {
@@ -14,8 +15,9 @@
     --header-color: rgb(15 23 42);
     --author-color: rgb(15 23 42);
     /* --searchbar-color: #1b2023; */
-    --searchbar-color:rgb(15 23 42);
+    --searchbar-color: rgb(15 23 42);
     --link-color: lightblue;
+    --bestin-color: green;
 }
 
 body {
@@ -27,18 +29,24 @@ a {
     color: var(--link-color);
 }
 
-.clsHeader {
+.clsHeader,
+.clsRightSubHeader {
     background-color: var(--header-color);
 }
-.clsAuthor{
+.clsAuthor {
     background-color: var(--author-color);
     margin-top: auto;
 }
-.clsSearchBar{
+.clsSearchBar {
     background-color: var(--searchbar-color);
 }
-.clsCard{
+.clsCard {
     background-color: var(--searchbar-color);
+}
+.clsBestIn {
+    padding: 4px 12px;
+    background-color: var(--bestin-color);
+    border-radius: 100px;
 }
 
 /* Custom Dark Mode Toggle Element */

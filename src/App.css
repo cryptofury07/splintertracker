@@ -1,4 +1,4 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 .App {
@@ -11,13 +11,20 @@ html{
     flex-direction: column;
 }
 
-.clsHeader{
+.clsHeader {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     padding-left: 16px;
     padding-right: 16px;
+    z-index: 2;
+}
+
+.clsRightSubHeader {
+    display: flex;
+    height: 100%;
+    align-items: center;
     z-index: 2;
 }
 
@@ -37,14 +44,31 @@ div[contentEditable="true"]:empty:after {
     font-weight: 600;
     margin-left: -54px;
 }
-.clsBattleCardParent,
-.clsBattleMonsterParent {
+.clsBattleCardParent {
     overflow-y: scroll;
     min-width: 720px;
 }
-.clsBattleMonsterParent{
+
+.clsBattleAnalysis {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: scroll;
+    z-index: 3;
+}
+.clsBattleAnalysisHeader {
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.clsBattleMonsterParent {
     position: absolute;
     height: 100%;
+    width: 100%;
+    justify-content: center;
 }
 .clsBattleCard,
 .clsBattleMonster {
